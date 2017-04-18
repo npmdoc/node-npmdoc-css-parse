@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/reworkcss/css-parse"
-
-    >css-parse (v2.0.0)</a>
+    <a href="https://github.com/reworkcss/css-parse">css-parse (v2.0.0)</a>
 </h1>
 <h4>CSS parser</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.css-parse">module css-parse</a><ol>
 
@@ -102,7 +95,7 @@
   function updatePosition(str) {
     var lines = str.match(/\n/g);
     if (lines) lineno += lines.length;
-    var i = str.lastIndexOf(&#x27;\n&#x27;);
+    var i = str.lastIndexOf('\n');
     column = ~i ? str.length - i : column + str.length;
   }
 
@@ -142,7 +135,7 @@
   var errorsList = [];
 
   function error(msg) {
-    var err = new Error(options.source + &#x27;:&#x27; + lineno + &#x27;:&#x27; + column + &#x27;: &#x27; + msg);
+    var err = new Error(options.source + ':' + lineno + ':' + column + ': ' + msg);
     err.reason = msg;
     err.filename = options.source;
     err.line = lineno;
@@ -164,7 +157,7 @@
     var rulesList = rules();
 
     return {
-      type: &#x27;stylesheet&#x27;,
+      type: 'stylesheet',
       stylesheet: {
         rules: rulesList,
         parsingErrors: errorsList
@@ -197,7 +190,7 @@
     var rules = [];
     whitespace();
     comments(rules);
-    while (css.length &#x26;&#x26; css.charAt(0) != &#x27;}&#x27; &#x26;&#x26; (node = atrule() || rule())) {
+    while (css.length &amp;&amp; css.charAt(0) != '}' &amp;&amp; (node = atrule() || rule())) {
       if (node !== false) {
         rules.push(node);
         comments(rules);
@@ -248,14 +241,14 @@
 
   function comment() {
     var pos = position();
-    if (&#x27;/&#x27; != css.charAt(0) || &#x27;*&#x27; != css.charAt(1)) return;
+    if ('/' != css.charAt(0) || '*' != css.charAt(1)) return;
 
     var i = 2;
-    while (&#x22;&#x22; != css.charAt(i) &#x26;&#x26; (&#x27;*&#x27; != css.charAt(i) || &#x27;/&#x27; != css.charAt(i + 1))) ++i;
+    while ("" != css.charAt(i) &amp;&amp; ('*' != css.charAt(i) || '/' != css.charAt(i + 1))) ++i;
     i += 2;
 
-    if (&#x22;&#x22; === css.charAt(i-1)) {
-      return error(&#x27;End of comment missing&#x27;);
+    if ("" === css.charAt(i-1)) {
+      return error('End of comment missing');
     }
 
     var str = css.slice(2, i - 2);
@@ -265,7 +258,7 @@
     column += 2;
 
     return pos({
-      type: &#x27;comment&#x27;,
+      type: 'comment',
       comment: str
     });
   }
@@ -280,13 +273,13 @@
     /* @fix Remove all comments from selectors
      * http://ostermiller.org/findcomment.html */
     return trim(m[0])
-      .replace(/\/\*([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*\*\/+/g, &#x27;&#x27;)
-      .replace(/&#x22;(?:\\&#x22;|[^&#x22;])*&#x22;|&#x27;(?:\\&#x27;|[^&#x27;])*&#x27;/g, function(m) {
-        return m.replace(/,/g, &#x27;\u200C&#x27;);
+      .replace(/\/\*([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*\*\/+/g, '')
+      .replace(/"(?:\\"|[^"])*"|'(?:\\'|[^'])*'/g, function(m) {
+        return m.replace(/,/g, '\u200C');
       })
       .split(/\s*(?![^(]*\)),\s*/)
       .map(function(s) {
-        return s.replace(/\u200C/g, &#x27;,&#x27;);
+        return s.replace(/\u200C/g, ',');
       });
   }
 
@@ -303,14 +296,14 @@
     prop = trim(prop[0]);
 
     // :
-    if (!match(/^:\s*/)) return error(&#x22;property missing &#x27;:&#x27;&#x22;);
+    if (!match(/^:\s*/)) return error("property missing ':'");
 
     // val
-    var val = match(/^((?:&#x27;(?:\\&#x27;|.)*?&#x27;|&#x22;(?:\\&#x22;|.)*?&#x22;|\([^\)]*?\)|[^};])+)/);
+    var val = match(/^((?:'(?:\\'|.)*?'|"(?:\\"|.)*?"|\([^\)]*?\)|[^};])+)/);
 
     var ret = pos({
-      type: &#x27;declaration&#x27;,
-      property: prop.replace(commentre, &#x27;&#x27;),
+      type: 'declaration',
+      property: prop.replace(commentre, ''),
       value: v ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -324,3 +317,4 @@
     ]
 </div>
 </div>
+</body></html>
