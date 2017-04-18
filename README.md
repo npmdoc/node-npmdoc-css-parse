@@ -1,9 +1,14 @@
-# api documentation for  [css-parse (v2.0.0)](https://github.com/reworkcss/css-parse)  [![npm package](https://img.shields.io/npm/v/npmdoc-css-parse.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-css-parse) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-css-parse.svg)](https://travis-ci.org/npmdoc/node-npmdoc-css-parse)
+# npmdoc-css-parse
+
+#### api documentation for  [css-parse (v2.0.0)](https://github.com/reworkcss/css-parse)  [![npm package](https://img.shields.io/npm/v/npmdoc-css-parse.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-css-parse) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-css-parse.svg)](https://travis-ci.org/npmdoc/node-npmdoc-css-parse)
+
 #### CSS parser
 
-[![NPM](https://nodei.co/npm/css-parse.png?downloads=true)](https://www.npmjs.com/package/css-parse)
+[![NPM](https://nodei.co/npm/css-parse.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/css-parse)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-css-parse/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-css-parse_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-css-parse/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-css-parse/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-css-parse/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-css-parse/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-css-parse/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-css-parse/build/screenCapture.npmPackageListing.svg)
 
@@ -17,8 +22,7 @@
 
 {
     "author": {
-        "name": "TJ Holowaychuk",
-        "email": "tj@vision-media.ca"
+        "name": "TJ Holowaychuk"
     },
     "bugs": {
         "url": "https://github.com/reworkcss/css-parse/issues"
@@ -46,49 +50,38 @@
     "main": "index",
     "maintainers": [
         {
-            "name": "tjholowaychuk",
-            "email": "tj@vision-media.ca"
+            "name": "tjholowaychuk"
         },
         {
-            "name": "jonathanong",
-            "email": "jonathanrichardong@gmail.com"
+            "name": "jonathanong"
         },
         {
-            "name": "jongleberry",
-            "email": "jonathanrichardong@gmail.com"
+            "name": "jongleberry"
         },
         {
-            "name": "conradz",
-            "email": "me@conradz.com"
+            "name": "conradz"
         },
         {
-            "name": "necolas",
-            "email": "nicolasgallagher@gmail.com"
+            "name": "necolas"
         },
         {
-            "name": "anthonyshort",
-            "email": "antshort@gmail.com"
+            "name": "anthonyshort"
         },
         {
-            "name": "ianstormtaylor",
-            "email": "ian@ianstormtaylor.com"
+            "name": "ianstormtaylor"
         },
         {
-            "name": "moox",
-            "email": "m@moox.io"
+            "name": "moox"
         },
         {
-            "name": "clintwood",
-            "email": "clint@anotherway.co.za"
+            "name": "clintwood"
         },
         {
-            "name": "lydell",
-            "email": "simon.lydell@gmail.com"
+            "name": "lydell"
         }
     ],
     "name": "css-parse",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/reworkcss/css-parse.git"
@@ -96,16 +89,6 @@
     "version": "2.0.0"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module css-parse](#apidoc.module.css-parse)
-
-
-
-# <a name="apidoc.module.css-parse"></a>[module css-parse](#apidoc.module.css-parse)
 
 
 
